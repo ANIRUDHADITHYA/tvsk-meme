@@ -41,13 +41,13 @@
 
 .kh-coin {
   position: absolute;
-  bottom: 100px;
+  bottom: 200px;
   left: 0px;
 }
 
 .dt-coin {
   position: absolute;
-  bottom: 100px;
+  bottom: 200px;
   right: 0px;
 }
 
@@ -195,7 +195,7 @@ nav h1 {
 /* Mobile Styles */
 @media (max-width: 600px) {
   .home-background {
-    background-size: contain;
+    background-size: cover;
   }
 
   nav {
