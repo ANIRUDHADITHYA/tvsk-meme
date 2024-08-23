@@ -65,6 +65,12 @@
   justify-content: center;
   border-radius: 25px;
   box-shadow: -2px 2px 10px black;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.view-results:hover {
+  background-color: #48e863;
 }
 
 .view-results h1 {
@@ -104,6 +110,10 @@
 .result-inner-container.dt h1 {
   font-size: 52px;
   color: rgb(139, 9, 0);
+}
+
+.result-inner-container h1 {
+  transition: font-size 0.2s;
 }
 
 .result-inner-container.kh h1 {
@@ -158,6 +168,8 @@ nav {
   justify-content: space-between;
   padding: 20px 50px;
   color: white;
+  position: relative;
+  z-index: 1000;
 }
 
 .nav-items {
@@ -250,6 +262,17 @@ nav h1 {
   .fly-text {
     font-size: 42px;
   }
+
+  .contact-address-nav {
+    flex-direction: column;
+  }
+
+  .ticker {
+    padding: 0 !important;
+  }
+
+
+  ;
 }
 
 /* Tablet Styles */
@@ -366,4 +389,29 @@ nav h1 {
   .fly-text {
     font-size: 82px;
   }
+}
+
+
+.contact-address-nav {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.ticker {
+  padding-left: 30px;
+}
+
+.ticker span {
+  padding-left: 10px;
+}
+
+.mute-icon {
+  width: 50px !important;
 }

@@ -7,24 +7,26 @@ function App() {
   const [shrinkCoin, setShrinkCoin] = useState(null);
   const [khBalance, setKhBalance] = useState(0);
   const [dtBalance, setDtBalance] = useState(0);
+  const [isMuted, setIsMuted] = useState(false);
 
   const playBeepSound = () => {
-    const audio = new Audio(`/audio.mp3`);
-    audio.play();
+    if (!isMuted) {
+      const audio = new Audio(`/audio.mp3`);
+      audio.play();
+    }
   };
 
   const formatBalance = (balance) => {
-    if (balance >= 1e12) {
-      return `${(balance / 1e12).toFixed(1)} T`;
-    } else if (balance >= 1e9) {
-      return `${(balance / 1e9).toFixed(1)} B`;
-    } else if (balance >= 1e6) {
-      return `${(balance / 1e6).toFixed(1)} M`;
-    } else if (balance >= 1e3) {
-      return `${(balance / 1e3).toFixed(1)} K`;
-    } else {
-      return balance.toString();
+    if (balance >= 1e7) {
+      if (balance >= 1e12) {
+        return `${(balance / 1e12).toFixed(1)} T`;
+      } else if (balance >= 1e9) {
+        return `${(balance / 1e9).toFixed(1)} B`;
+      } else if (balance >= 1e6) {
+        return `${(balance / 1e6).toFixed(1)} M`;
+      }
     }
+    return balance.toString();
   };
 
   useEffect(() => {
@@ -71,13 +73,22 @@ function App() {
     }, 1000);
   };
 
+  const toggleMute = () => {
+    setIsMuted(!isMuted);
+  };
+
   return (
     <div className='home-background'>
+      <div className='contact-address-nav'>
+        <p>CA: coming soon......</p>
+        <p className='ticker'>| <span>ticker $vote</span></p>
+      </div>
       <nav>
         <h1>$BattleOfPresident</h1>
         <div className='nav-items'>
-          <img src='/t.jpg' alt='Trump' />
-          <img src='/x.jpg' alt='Harris' />
+          <a className='twitter' href='https://t.me/battleofpresidents' target='__blank'><img src='/t.jpg' alt='telegram' /></a >
+          <a className='telegram' href='https://x.com/battleofpresi' target='__blank'><img src='/x.jpg' alt='x' /></a>
+          <img className="mute-icon" src={isMuted ? "/mute1.png" : "/mute2.jpeg"} onClick={toggleMute} alt="Mute/Unmute"></img>
         </div>
       </nav>
       <div className='coin-wrapper'>
@@ -98,12 +109,12 @@ function App() {
       <div className='poll-results'>
         <div className='result-inner-container kh'>
           <img src='/khr.png' alt='KH' />
-          <h1>{formatBalance(khBalance)}</h1>
+          <h1 style={{ fontSize: khBalance >= 1e7 ? '52px' : '42px' }}>{formatBalance(khBalance)}</h1>
         </div>
         <img className='vs' src='/tt.gif' alt='vs' />
         <div className='result-inner-container dt'>
           <img src='/dtr.png' alt='DT' />
-          <h1>{formatBalance(dtBalance)}</h1>
+          <h1 style={{ fontSize: dtBalance >= 1e7 ? '52px' : '42px' }}>{formatBalance(dtBalance)}</h1>
         </div>
       </div>
       {clicks.map((click) => (
