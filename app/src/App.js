@@ -29,18 +29,21 @@ function App() {
     return balance.toString();
   };
 
-  useEffect(() => {
-    const fetchBalances = async () => {
-      try {
-        const response = await axios.get(`https://api.battleofpresident.fun/api/get-balances`);
-        setKhBalance(response.data.khBalance);
-        setDtBalance(response.data.dtBalance);
-      } catch (error) {
-        console.error('Error fetching balances:', error);
-      }
-    };
+  const fetchBalances = async () => {
+    try {
+      const response = await axios.get(`https://api.battleofpresident.fun/api/get-balances`);
+      setKhBalance(response.data.khBalance);
+      setDtBalance(response.data.dtBalance);
+    } catch (error) {
+      console.error('Error fetching balances:', error);
+    }
+  };
 
+  useEffect(() => {
     fetchBalances();
+    const interval = setInterval(fetchBalances, 15000); // 15000ms = 15s
+
+    return () => clearInterval(interval); // Cleanup interval on component unmount
   }, []);
 
   const handleCoinClick = async (coinType, e) => {
@@ -80,11 +83,11 @@ function App() {
   return (
     <div className='home-background'>
       <div className='contact-address-nav'>
-        <p>CA: coming soon......</p>
-        <p className='ticker'>| <span>ticker $vote</span></p>
+        <p>CA: Coming Soon......</p>
+        <p className='ticker'>| <span>Ticker: $vote</span></p>
       </div>
       <nav>
-        <h1>$BattleOfPresident</h1>
+        <h1>$BattleOfPresidents</h1>
         <div className='nav-items'>
           <a className='twitter' href='https://t.me/battleofpresidents' target='__blank'><img src='/t.jpg' alt='telegram' /></a >
           <a className='telegram' href='https://x.com/battleofpresi' target='__blank'><img src='/x.jpg' alt='x' /></a>
