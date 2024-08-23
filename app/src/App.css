@@ -73,11 +73,12 @@
   background-color: #48e863;
 }
 
-.view-results h1 {
+.view-results a {
   color: white;
   font-size: 22px;
   text-align: center;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .result-inner-container {
@@ -206,6 +207,11 @@ nav h1 {
 
 /* Mobile Styles */
 @media (max-width: 600px) {
+
+  .contact-address-nav p {
+    font-size: 12px;
+  }
+
   .home-background {
     background-size: cover;
   }

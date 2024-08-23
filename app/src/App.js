@@ -83,7 +83,7 @@ function App() {
   return (
     <div className='home-background'>
       <div className='contact-address-nav'>
-        <p>CA: Coming Soon......</p>
+        <p>CA: Bk5wQ5chVapsJbztR8LaDGPXgTtP1uNEiyXhpENL3y2d</p>
         <p className='ticker'>| <span>Ticker: $vote</span></p>
       </div>
       <nav>
@@ -107,7 +107,7 @@ function App() {
         ></img>
       </div>
       <div className='view-results'>
-        <h1>Buy Now</h1>
+        <a href='https://pump.fun/Bk5wQ5chVapsJbztR8LaDGPXgTtP1uNEiyXhpENL3y2d' target='__blank'>Buy Now</a>
       </div>
       <div className='poll-results'>
         <div className='result-inner-container kh'>
