@@ -31,7 +31,7 @@ function App() {
 
   const fetchBalances = async () => {
     try {
-      const response = await axios.get(`https://api.battleofpresident.fun/api/get-balances`);
+      const response = await axios.get(`https://api.clashofpresidents.fun/api/get-balances`);
       setKhBalance(response.data.khBalance);
       setDtBalance(response.data.dtBalance);
     } catch (error) {
@@ -59,7 +59,7 @@ function App() {
     }, 100);
 
     try {
-      const response = await axios.post(`https://api.battleofpresident.fun/api/update-balance`, {
+      const response = await axios.post(`https://api.clashofpresidents.fun/api/update-balance`, {
         coinType,
       });
       if (coinType === 'kh') {
@@ -83,11 +83,11 @@ function App() {
   return (
     <div className='home-background'>
       <div className='contact-address-nav'>
-        <p>CA: Bk5wQ5chVapsJbztR8LaDGPXgTtP1uNEiyXhpENL3y2d</p>
-        <p className='ticker'>| <span>Ticker: $vote</span></p>
+        <p>CA: Coming Soon...</p>
+        <p className='ticker'>| <span>Ticker: $clash</span></p>
       </div>
       <nav>
-        <h1>$BattleOfPresidents</h1>
+        <h1>$ClashOfPresidents</h1>
         <div className='nav-items'>
           <a className='twitter' href='https://t.me/battleofpresidents' target='__blank'><img src='/t.jpg' alt='telegram' /></a >
           <a className='telegram' href='https://x.com/battleofpresi' target='__blank'><img src='/x.jpg' alt='x' /></a>
