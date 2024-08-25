@@ -89,8 +89,8 @@ function App() {
       <nav>
         <h1>$ClashOfPresidents</h1>
         <div className='nav-items'>
-          <a className='twitter' href='#' target='__blank'><img src='/t.jpg' alt='telegram' /></a >
-          <a className='telegram' href='#' target='__blank'><img src='/x.jpg' alt='x' /></a>
+          <a className='twitter' href='https://t.me/clashofpresidents' target='__blank'><img src='/t.jpg' alt='telegram' /></a >
+          <a className='telegram' href='https://x.com/clashofpresiden' target='__blank'><img src='/x.jpg' alt='x' /></a>
           <img className="mute-icon" src={isMuted ? "/mute1.png" : "/mute2.jpeg"} onClick={toggleMute} alt="Mute/Unmute"></img>
         </div>
       </nav>
