@@ -83,14 +83,14 @@ function App() {
   return (
     <div className='home-background'>
       <div className='contact-address-nav'>
-        <p>CA: Coming Soon...</p>
+        <p>CA: F1qh8uEYZ8t4wAJsXdvg1pfhn3hhpzGkyydpi93if3uq</p>
         <p className='ticker'>| <span>Ticker: $clash</span></p>
       </div>
       <nav>
         <h1>$ClashOfPresidents</h1>
         <div className='nav-items'>
-          <a className='twitter' href='https://t.me/clashofpresidents' target='__blank'><img src='/t.jpg' alt='telegram' /></a >
-          <a className='telegram' href='https://x.com/clashofpresiden' target='__blank'><img src='/x.jpg' alt='x' /></a>
+          <a className='twitter' href='https://t.me/clashofpresidents1' target='__blank'><img src='/t.jpg' alt='telegram' /></a >
+          <a className='telegram' href='https://x.com/clashofpres' target='__blank'><img src='/x.jpg' alt='x' /></a>
           <img className="mute-icon" src={isMuted ? "/mute1.png" : "/mute2.jpeg"} onClick={toggleMute} alt="Mute/Unmute"></img>
         </div>
       </nav>
@@ -107,7 +107,7 @@ function App() {
         ></img>
       </div>
       <div className='view-results'>
-        <a href='#' target='__blank'>Buy Now</a>
+        <a href='https://raydium.io/swap/?inputMint=sol&outputMint=F1qh8uEYZ8t4wAJsXdvg1pfhn3hhpzGkyydpi93if3uq' target='__blank'>Buy Now</a>
       </div>
       <div className='poll-results'>
         <div className='result-inner-container kh'>
